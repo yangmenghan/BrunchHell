@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraScript : MonoBehaviour {
+public class PlayerShootingBehaviourScript : MonoBehaviour {
 
-    static Camera instance;
+    public BulletScript bulletPrefab;
 
 	// Use this for initialization
 	void Start () {
-        instance = GetComponent<Camera>();
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetMouseButtonDown(0)){
+            
+        }
 	}
-
-    public static Camera GetCamera() {
-        return instance;
-    }
 }
