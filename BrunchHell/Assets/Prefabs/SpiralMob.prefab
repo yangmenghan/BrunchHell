@@ -20,14 +20,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4391188279629122}
   - component: {fileID: 114247638103382382}
-  - component: {fileID: 114633869915607502}
   - component: {fileID: 212449863930016864}
-  - component: {fileID: 114191184229236920}
   - component: {fileID: 50748380458419736}
   - component: {fileID: 114130429712096828}
+  - component: {fileID: 70220282557906990}
+  - component: {fileID: 114900990412390146}
   m_Layer: 0
   m_Name: SpiralMob
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439597692533724}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -65,6 +65,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &70220282557906990
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439597692533724}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.24, y: 0.35}
+  m_Direction: 0
 --- !u!114 &114130429712096828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,22 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 114076748064357742, guid: 87db0bf7fdc1d6c48a17ad97684a0919,
     type: 2}
---- !u!114 &114191184229236920
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439597692533724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70972d890e9074f4facb03718b3fafc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  YBase: 5
-  XStart: 5
-  Amplitude: 0
-  XSpeed: 0
-  Frequency: 0.25
+  pause: 0
+  orientation: 0
 --- !u!114 &114247638103382382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ce2efe895fd6943b4d6be2050d60a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114633869915607502
+--- !u!114 &114900990412390146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439597692533724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f579aa509a44144a2320c2e51614ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 02f0123acbeb8ef4caf85dc34c4dfc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212449863930016864

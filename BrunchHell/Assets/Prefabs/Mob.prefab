@@ -20,14 +20,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4277215916677374}
   - component: {fileID: 114420031444899620}
-  - component: {fileID: 114683904297407424}
   - component: {fileID: 212762884197320198}
   - component: {fileID: 114941698122613180}
   - component: {fileID: 50758536645781348}
   - component: {fileID: 114138531790993048}
+  - component: {fileID: 70989019174774002}
+  - component: {fileID: 114504536039384052}
   m_Layer: 0
   m_Name: Mob
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +53,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767347751013520}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -65,6 +66,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &70989019174774002
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1767347751013520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.24, y: 0.35}
+  m_Direction: 0
 --- !u!114 &114138531790993048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,6 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 114076748064357742, guid: 87db0bf7fdc1d6c48a17ad97684a0919,
     type: 2}
+  pause: 0
+  orientation: 0
 --- !u!114 &114420031444899620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ce2efe895fd6943b4d6be2050d60a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114683904297407424
+--- !u!114 &114504536039384052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767347751013520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f579aa509a44144a2320c2e51614ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 02f0123acbeb8ef4caf85dc34c4dfc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114941698122613180
@@ -111,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70972d890e9074f4facb03718b3fafc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YBase: 2
+  YBase: 0
   XStart: 0
   Amplitude: 2
   XSpeed: 2

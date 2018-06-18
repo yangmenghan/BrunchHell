@@ -6,7 +6,6 @@ public class BulletScript : MonoBehaviour {
 
     protected float velocity;
     protected float angle;
-    protected string parentTag;
 
 
 	// Use this for initialization
@@ -20,7 +19,7 @@ public class BulletScript : MonoBehaviour {
 
     public virtual void Init(string tag, float velocity, float angle)
     {
-        this.parentTag = tag;
+        gameObject.tag = tag;
         this.velocity = velocity;
         this.angle = angle;
     }
@@ -29,5 +28,14 @@ public class BulletScript : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    /*
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag != gameObject.tag)
+        {
+            Destroy(gameObject);
+        }
+    }*/
 
 }

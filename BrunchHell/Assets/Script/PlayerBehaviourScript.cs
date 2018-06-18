@@ -26,9 +26,8 @@ public class PlayerBehaviourScript : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.CompareTag("enemyShot") || other.CompareTag("enemy") || true){
-            Destroy(this.gameObject);   
-            Destroy(this);   
+        if(other.CompareTag("Enemy")){
+            Destroy(gameObject);   
         }
     }
 

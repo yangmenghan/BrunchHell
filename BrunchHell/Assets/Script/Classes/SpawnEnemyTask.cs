@@ -10,8 +10,6 @@ public class SpawnEnemyTask : GameManagerTask{
     public SpawnEnemyTask(GameObject manager,  GameObject prefab, Vector2 pos) : base(manager)
     {
         this.prefab = prefab;
-        this.prefab.GetComponent<MobMovement>().XStart = pos.x;
-        this.prefab.GetComponent<MobMovement>().YBase = pos.y;
         this.pos = pos;
     }
 
