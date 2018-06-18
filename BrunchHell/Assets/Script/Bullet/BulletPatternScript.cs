@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletPatternScript : MonoBehaviour {
+public abstract class BulletPatternScript : MonoBehaviour {
     protected float frequency;
     protected string parentTag;
-    protected ArrayList polarStartCoord;
+    protected List<int> polarStartCoord;
     protected float lastSpawnTime;
     protected float velocity;
     public BulletScript bulletPrefab;
@@ -15,7 +15,7 @@ public class BulletPatternScript : MonoBehaviour {
         this.parentTag = parentTag;
     }
 
-    public void SpawnBullets(Vector3 spawnPoint)
+    public virtual void SpawnBullets(Vector3 spawnPoint)
     {
         if (Time.time - lastSpawnTime > frequency) {
 
@@ -35,9 +35,14 @@ public class BulletPatternScript : MonoBehaviour {
 
     }
 
+    protected abstract void Init();
+
+
     void Start()
     {
         lastSpawnTime = Time.time;
+        Init();
+
     }
 
     // Update is called once per frame

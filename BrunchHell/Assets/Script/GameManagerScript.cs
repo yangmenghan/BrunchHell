@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour {
 
     public GameObject MobPrefab;
+    public GameObject SpiralMobPrefab;
 
     private List<GameManagerTask> tasks;
     private int currentTask = 0;
@@ -19,6 +20,7 @@ public class GameManagerScript : MonoBehaviour {
         tasks.Add(new SpawnEnemyTask(this.transform.gameObject, MobPrefab, new Vector2(0, 0)));
         tasks.Add(new WaitTask(this.transform.gameObject, 0.5f));
         tasks.Add(new SpawnEnemyTask(this.transform.gameObject, MobPrefab, new Vector2(0, 0)));
+
     }
 	
 	// Update is called once per frame
